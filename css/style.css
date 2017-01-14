@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: helvetica, sans-serif;
+	box-sizing: border-box;
+	color: white;
+	user-select: none;
+}
+
+body {
+	background: #e1e1e1;
+}
+
+#dicecontainer {
+	text-align: center;
+	font-size: 0;
+	margin: 20px;
+	min-height: 92px;
+}
+
+.die {
+	height: 80px;
+	width: 80px;
+	display: inline-block;
+	margin: 5px;
+}
+
+#menu {
+	text-align: center;
+}
+
+.button {
+	width: 100px;
+	height: 40px;
+	background: white;
+	color: #cccccc;
+	display: inline-block;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 5px;
+	border-bottom: 2px solid #cccccc;
+	text-transform: uppercase;
+}
+
