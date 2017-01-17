@@ -83,7 +83,7 @@ var resetFaces = function (){
 
 /* ---------- RESET DICE ---------- */
 
-var reset = function (){
+var resetDice = function (){
 	var currentNumber = document.getElementById("dicecontainer").childElementCount;
 	var add = function(){
 		var newDie = document.createElement("img");
