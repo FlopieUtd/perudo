@@ -27,23 +27,23 @@ var resetFaces = function (){
 
 /* ---------- REMOVE DICE ---------- */
 
-	var remove = function(){
+	var removeDie = function(){
 		var getDice = document.getElementById("dicecontainer");
-		var removeDie = getDice.lastElementChild;
-		getDice.removeChild(removeDie);
-		console.log("Player lost a dice");
+		var removeTheDie = getDice.lastElementChild;
+		getDice.removeChild(removeTheDie);
+		console.log("Player lost a die");
 	}
 
 /* ---------- ADD DICE ---------- */
 
-	var tryToAdd = function (){
+	var tryToAddDie = function (){
 		var x = count();
 		var add = function(){
 			var newDie = document.createElement("img");
 			newDie.className="die";
 			newDie.src="img/default.png"
 			document.getElementById("dicecontainer").appendChild(newDie); 
-			console.log("Player won a dice")
+			console.log("Player won a die")
 		}
 		if (x < 5) {
 			add();
