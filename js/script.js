@@ -27,13 +27,13 @@ var resetFaces = function (){
 
 /* ---------- REMOVE DIE ---------- */
 
-	var remove = function(){
+	var removeDie = function(){
 		var x= count();
 		var getDice = document.getElementById("dicecontainer");
-		var removeDie = getDice.lastElementChild;
+		var removeTheDie = getDice.lastElementChild;
 
 		if (x > 1){
-			getDice.removeChild(removeDie);
+			getDice.removeChild(removeTheDie);
 			console.log("You lost a die");
 			$(".add").removeClass("disabled"); 			
 		} else {
