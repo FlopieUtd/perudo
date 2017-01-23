@@ -41,6 +41,7 @@ var resetFaces = function (){
 			$(".remove").addClass("disabled"); 
 			$(".roll").addClass("disabled"); 
 			$(".add").addClass("disabled"); 
+			document.getElementById("gameover").style.display = "block";
 			console.log("You lost!");
 		}
 	}
@@ -131,7 +132,9 @@ var reset = function (){
 	console.log("Dice were reset");
 	$(".remove").removeClass("disabled"); 
 	$(".roll").removeClass("disabled"); 
-	$(".add").addClass("disabled"); 	
+	$(".add").addClass("disabled"); 
+	document.getElementById("gameover").style.display = "none";
+	
 }
 
 

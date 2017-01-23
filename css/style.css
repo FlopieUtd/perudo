@@ -90,3 +90,15 @@ body {
   	transform: translateY(0px) !important;
   	box-shadow: 0 2px #cccccc; 
 }
+
+#gameover {
+	z-index: 999;
+	font-size: 40px;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	left: 50%;
+	margin-left: -100px;
+	color: #cccccc;
+	display: none;
+}
