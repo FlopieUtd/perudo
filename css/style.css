@@ -2,19 +2,35 @@
 	margin: 0;
 	padding: 0;
 	font-family: helvetica, sans-serif;
-	box-sizing: border-box;
 	color: white;
 	user-select: none;
 }
 
 body {
 	background: #e1e1e1;
+	position: relative;
+}
+
+#container {
+	max-width: 450px;
+	height: 320px;
+	position: relative;
+	margin: auto;
+}
+
+#infobar {
+	text-align: right;
+	margin: 5px;
+}
+
+#infobar i:hover {
+	cursor: pointer;
 }
 
 #dicecontainer {
 	text-align: center;
 	font-size: 0;
-	margin: 20px;
+	margin-bottom: 5px;
 	min-height: 92px;
 }
 
@@ -22,15 +38,17 @@ body {
 	height: 80px;
 	width: 80px;
 	display: inline-block;
-	margin: 5px;
+	margin: 4px;
 }
 
 #menu {
 	text-align: center;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
 }
 
 .button {
-	width: 100px;
 	height: 40px;
 	background: white;
 	color: #cccccc;
@@ -39,8 +57,36 @@ body {
 	line-height: 40px;
 	cursor: pointer;
 	border-radius: 5px;
-	margin: 5px;
-	border-bottom: 2px solid #cccccc;
+  	box-shadow: 0 2px #cccccc;
 	text-transform: uppercase;
 }
 
+.roll {
+	display: block;
+	width: 90%;
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+.roll:active, .remove:active, .add:active, .reset:active {
+  transform: translateY(2px);
+  box-shadow: 0 0;
+  background: #f0f0f0;
+}
+
+.remove, .add, .reset {
+	width: 28%;
+	margin-bottom: 5px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.disabled {
+	background: #f0f0f0;
+	cursor: default;
+}
+
+.disabled:active {
+  	transform: translateY(0px) !important;
+  	box-shadow: 0 2px #cccccc; 
+}

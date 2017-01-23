@@ -25,16 +25,27 @@ var resetFaces = function (){
 	$(".die5").attr("src", "img/default.png")
 }
 
-/* ---------- REMOVE DICE ---------- */
+/* ---------- REMOVE DIE ---------- */
 
 	var remove = function(){
+		var x= count();
 		var getDice = document.getElementById("dicecontainer");
 		var removeDie = getDice.lastElementChild;
-		getDice.removeChild(removeDie);
-		console.log("Player lost a dice");
+
+		if (x > 1){
+			getDice.removeChild(removeDie);
+			console.log("You lost a die");
+			$(".add").removeClass("disabled"); 			
+		} else {
+			getDice.removeChild(removeDie);
+			$(".remove").addClass("disabled"); 
+			$(".roll").addClass("disabled"); 
+			$(".add").addClass("disabled"); 
+			console.log("You lost!");
+		}
 	}
 
-/* ---------- ADD DICE ---------- */
+/* ---------- ADD DIE ---------- */
 
 	var tryToAdd = function (){
 		var x = count();
@@ -43,13 +54,19 @@ var resetFaces = function (){
 			newDie.className="die";
 			newDie.src="img/default.png"
 			document.getElementById("dicecontainer").appendChild(newDie); 
-			console.log("Player won a dice")
+			console.log("You won a die")
 		}
-		if (x < 5) {
+		if (x < 4 && x > 0) {
 			add();
+		} else if (x < 5 && x > 0){
+			add();
+			$(".add").addClass("disabled"); 			
+		} else if (x == 0){
+			console.log("Game over! Press RESET for a new game.");
 		} else {
-			console.log("Player has the maximum amount of dice");
+			console.log("You have the maximum amount of dice!")
 		}
+
 	}
 
 /* ---------- ROLL DICE ---------- */
@@ -78,7 +95,7 @@ var resetFaces = function (){
 		$(".die4").attr("src", eval("face"+randomdice+".src"))
 		var randomdice=Math.round(Math.random()*5)
 		$(".die5").attr("src", eval("face"+randomdice+".src"))
-		console.log("Player rolled")
+		console.log("You rolled")
 	}
 
 /* ---------- RESET DICE ---------- */
@@ -112,6 +129,9 @@ var reset = function (){
 	    	resetFaces();
 	}
 	console.log("Dice were reset");
+	$(".remove").removeClass("disabled"); 
+	$(".roll").removeClass("disabled"); 
+	$(".add").addClass("disabled"); 	
 }
 
 
