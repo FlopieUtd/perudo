@@ -8,8 +8,9 @@
 	</head>
 	<body>
 		<div id="container">
+
 			<div id="infobar">
-				<i class="fa fa-question-circle" aria-hidden="true"></i>
+				<a href="http://www.perudo.co.uk/perudo-rules.php" target="_blank"><i class="fa fa-question-circle" aria-hidden="true" onClick="showInfo()"></i></a>
 			</div>
 			<div id="dicecontainer">
 				<img class="die die1" src="img/default.png">
@@ -19,11 +20,12 @@
 				<img class="die die5" src="img/default.png">
 			</div>
 			<div id="menu">
-				<div class="button roll" onClick=" assignDieNumber(); rollDice()">roll</div>
-				<div class="button remove" onClick="remove(); assignDieNumber(); resetFaces()">remove</div>
-				<div class="button add disabled"  onClick="tryToAdd(); assignDieNumber(); resetFaces()">add</div>
-				<div class="button reset" onClick="reset()">reset</div>
+				<div class="button roll" 			onClick="assignDieNumber(); rollDice()">				roll</div>
+				<div class="button remove" 			onClick="remove(); assignDieNumber(); resetFaces()">	remove</div>
+				<div class="button add disabled"  	onClick="tryToAdd(); assignDieNumber(); resetFaces()">	add</div>
+				<div class="button reset" 			onClick="reset()">										reset</div>
 			</div>
+
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	

@@ -138,9 +138,3 @@ var reset = function (){
 
 
 
-
-
-
-
-
-
