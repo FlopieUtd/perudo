@@ -37,7 +37,7 @@ var resetFaces = function (){
 			console.log("You lost a die");
 			$(".add").removeClass("disabled"); 			
 		} else {
-			getDice.removeChild(removeDie);
+			getDice.removeChild(removeTheDie);
 			$(".remove").addClass("disabled"); 
 			$(".roll").addClass("disabled"); 
 			$(".add").addClass("disabled"); 
