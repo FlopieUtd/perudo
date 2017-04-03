@@ -27,77 +27,79 @@ var resetFaces = function (){
 
 /* ---------- REMOVE DIE ---------- */
 
-	var removeDie = function(){
-		var x= count();
-		var getDice = document.getElementById("dicecontainer");
-		var removeTheDie = getDice.lastElementChild;
+var removeDie = function(){
+	var x= count();
+	var getDice = document.getElementById("dicecontainer");
+	var removeTheDie = getDice.lastElementChild;
 
-		if (x > 1){
-			getDice.removeChild(removeTheDie);
-			console.log("You lost a die");
-			$(".add").removeClass("disabled"); 			
-		} else {
-			getDice.removeChild(removeDie);
-			$(".remove").addClass("disabled"); 
-			$(".roll").addClass("disabled"); 
-			$(".add").addClass("disabled"); 
-			document.getElementById("gameover").style.display = "block";
-			console.log("You lost!");
-		}
+	if (x > 1){
+		getDice.removeChild(removeTheDie);
+		console.log("You lost a die");
+		$(".add").removeClass("disabled"); 			
+	} else {
+		getDice.removeChild(removeTheDie);
+		$(".remove").addClass("disabled"); 
+		$(".roll").addClass("disabled"); 
+		$(".add").addClass("disabled"); 
+		document.getElementById("gameover").style.display = "block";
+		console.log("You lost!");
 	}
+}
 
 /* ---------- ADD DIE ---------- */
 
-	var tryToAdd = function (){
-		var x = count();
-		var add = function(){
-			var newDie = document.createElement("img");
-			newDie.className="die";
-			newDie.src="img/default.png"
-			document.getElementById("dicecontainer").appendChild(newDie); 
-			console.log("You won a die")
-		}
-		if (x < 4 && x > 0) {
-			add();
-		} else if (x < 5 && x > 0){
-			add();
-			$(".add").addClass("disabled"); 			
-		} else if (x == 0){
-			console.log("Game over! Press RESET for a new game.");
-		} else {
-			console.log("You have the maximum amount of dice!")
-		}
-
+var tryToAdd = function (){
+	var x = count();
+	var add = function(){
+		var newDie = document.createElement("img");
+		newDie.className="die";
+		newDie.src="img/default.png"
+		document.getElementById("dicecontainer").appendChild(newDie); 
+		console.log("You won a die")
 	}
+	if (x < 4 && x > 0) {
+		add();
+		resetFaces();
+	} else if (x < 5 && x > 0){
+		add();
+		resetFaces();
+		$(".add").addClass("disabled"); 			
+	} else if (x == 0){
+		console.log("Game over! Press RESET for a new game.");
+	} else {
+		console.log("You have the maximum amount of dice!");
+		return false;
+	}
+}
 
 /* ---------- ROLL DICE ---------- */
 
-	var face0=new Image()
-	face0.src="img/d1.png"
-	var face1=new Image()
-	face1.src="img/d2.png"
-	var face2=new Image()
-	face2.src="img/d3.png"
-	var face3=new Image()
-	face3.src="img/d4.png"
-	var face4=new Image()
-	face4.src="img/d5.png"
-	var face5=new Image()
-	face5.src="img/d6.png"
+var face0=new Image()
+face0.src="img/d1.png"
+var face1=new Image()
+face1.src="img/d2.png"
+var face2=new Image()
+face2.src="img/d3.png"
+var face3=new Image()
+face3.src="img/d4.png"
+var face4=new Image()
+face4.src="img/d5.png"
+var face5=new Image()
+face5.src="img/d6.png"
 
-	function rollDice(){
-		var randomdice=Math.round(Math.random()*5)
-		$(".die1").attr("src", eval("face"+randomdice+".src"))
-		var randomdice=Math.round(Math.random()*5)
-		$(".die2").attr("src", eval("face"+randomdice+".src"))
-		var randomdice=Math.round(Math.random()*5)
-		$(".die3").attr("src", eval("face"+randomdice+".src"))
-		var randomdice=Math.round(Math.random()*5)
-		$(".die4").attr("src", eval("face"+randomdice+".src"))
-		var randomdice=Math.round(Math.random()*5)
-		$(".die5").attr("src", eval("face"+randomdice+".src"))
-		console.log("You rolled")
-	}
+function rollDice(){
+	var randomdice=Math.round(Math.random()*5)
+	$(".die1").attr("src", eval("face"+randomdice+".src"))
+	var randomdice=Math.round(Math.random()*5)
+	$(".die2").attr("src", eval("face"+randomdice+".src"))
+	var randomdice=Math.round(Math.random()*5)
+	$(".die3").attr("src", eval("face"+randomdice+".src"))
+	var randomdice=Math.round(Math.random()*5)
+	$(".die4").attr("src", eval("face"+randomdice+".src"))
+	var randomdice=Math.round(Math.random()*5)
+	$(".die5").attr("src", eval("face"+randomdice+".src"))
+	console.log("You rolled")
+}
 
 /* ---------- RESET DICE ---------- */
 
@@ -109,7 +111,6 @@ var reset = function (){
 		newDie.src="img/default.png"
 		document.getElementById("dicecontainer").appendChild(newDie); 
 	}
-
 	switch(currentNumber) {
 	    case 0:
 			add(); add(); add(); add(); add(); resetFaces();
@@ -134,9 +135,7 @@ var reset = function (){
 	$(".roll").removeClass("disabled"); 
 	$(".add").addClass("disabled"); 
 	document.getElementById("gameover").style.display = "none";
-	
 }
-
 
 
 
