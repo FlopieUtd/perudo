@@ -2,9 +2,7 @@
   width: 80px;
   height: 80px;
   margin-bottom: 12px;
-}
-
-.die:not(:last-of-type) {
-  margin-right: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
