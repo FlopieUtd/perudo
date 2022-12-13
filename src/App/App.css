@@ -29,7 +29,7 @@
   width: 100%;
   justify-content: center;
   font-size: 3rem;
-  color: #ccc;
+  color: #aaa;
 }
 
 .buttons {
@@ -53,8 +53,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 3px #ccc;	
-  color: #ccc;
+  box-shadow: 0 3px #aaa;	
+  color: #aaa;
   text-transform: uppercase;
   font-size: 1.2rem;
   width: 100%;
@@ -84,29 +84,23 @@
   min-height: 72px;
 }
 
-.explanation-container a {
-  text-decoration: none;
-}
-
-.explanation {
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	background: white;
-	color: #ccc;
-	border-radius: 100%;
-	font-weight: bold;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-
 .stats-container {
   width: 100%;
   margin-top: 12px;
-  color: #ccc;
+  color: #aaa;
   min-height: 72px;
+}
+
+.credits {
+  position: absolute;
+  bottom: 0px;
+  padding: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.credits a {
+  color: #aaa;
 }
 
 @media (max-width: 480px) {

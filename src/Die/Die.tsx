@@ -20,5 +20,5 @@ const dieMap = {
 };
 
 export const Die = ({ dieValue }: { dieValue: DieValue }) => {
-  return <img src={dieMap[dieValue]} className="die" />;
+  return <img src={dieMap[dieValue]} className="die" alt="die" />;
 };
