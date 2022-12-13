@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://flopieutd.github.io/perudo/static/css/main.d49fd15a.chunk.css",
+    "main.css": "https://flopieutd.github.io/perudo/static/css/main.d0e14f31.chunk.css",
     "main.js": "https://flopieutd.github.io/perudo/static/js/main.1bbf8432.chunk.js",
     "main.js.map": "https://flopieutd.github.io/perudo/static/js/main.1bbf8432.chunk.js.map",
     "runtime-main.js": "https://flopieutd.github.io/perudo/static/js/runtime-main.bbe9e41a.js",
@@ -10,7 +10,7 @@
     "static/js/3.72fe968b.chunk.js": "https://flopieutd.github.io/perudo/static/js/3.72fe968b.chunk.js",
     "static/js/3.72fe968b.chunk.js.map": "https://flopieutd.github.io/perudo/static/js/3.72fe968b.chunk.js.map",
     "index.html": "https://flopieutd.github.io/perudo/index.html",
-    "static/css/main.d49fd15a.chunk.css.map": "https://flopieutd.github.io/perudo/static/css/main.d49fd15a.chunk.css.map",
+    "static/css/main.d0e14f31.chunk.css.map": "https://flopieutd.github.io/perudo/static/css/main.d0e14f31.chunk.css.map",
     "static/js/2.f6a5bb88.chunk.js.LICENSE.txt": "https://flopieutd.github.io/perudo/static/js/2.f6a5bb88.chunk.js.LICENSE.txt",
     "static/media/d1.15be5e31.png": "https://flopieutd.github.io/perudo/static/media/d1.15be5e31.png",
     "static/media/d2.3f4d17e0.png": "https://flopieutd.github.io/perudo/static/media/d2.3f4d17e0.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.bbe9e41a.js",
     "static/js/2.f6a5bb88.chunk.js",
-    "static/css/main.d49fd15a.chunk.css",
+    "static/css/main.d0e14f31.chunk.css",
     "static/js/main.1bbf8432.chunk.js"
   ]
 }
