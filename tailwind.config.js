@@ -1,11 +1,11 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Include React TypeScript files
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        aztec: ["Aztec"], // Add your custom font family
+        aztec: ["Aztec"],
       },
     },
   },

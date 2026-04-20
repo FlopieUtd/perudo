@@ -1,4 +1,4 @@
-import "./Menu.css";
+"use client";
 
 interface MenuProps {
   onReturn: () => void;
