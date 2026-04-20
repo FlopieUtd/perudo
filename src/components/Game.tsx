@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { Die } from "./Die/Die";
-import { initializeGoogleAnalytics, trackGoogleAnalyticsEvent } from "../utils/ga4";
+import { trackGoogleAnalyticsEvent } from "../utils/ga4";
 
 const getDiceCoordinates = function (
   n: number,
@@ -96,10 +96,6 @@ export const Game = () => {
   const canDecrement = diceLeft > 0;
 
   const isFresh = roll === 0 && round === 1 && diceLeft === 5;
-
-  useEffect(() => {
-    initializeGoogleAnalytics();
-  }, []);
 
   useEffect(() => {
     setCoordinates(getDiceCoordinates(diceLeft, diceLeft === 5 ? 115 : 80));
