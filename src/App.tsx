@@ -118,7 +118,7 @@ const App = () => {
 
   return (
     <>
-      <div className="w-full h-full flex flex-col max-w-[480px] relative">
+      <main className="w-full h-full flex flex-col max-w-[480px] relative">
         {isFresh && (
           <h1 className="w-full text-center text-[20px] mt-[24px] absolute font-bold">
             let's play
@@ -182,7 +182,7 @@ const App = () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

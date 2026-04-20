@@ -6,22 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Play Perudo online with friends. No dice needed - start your game now!"
+      content="Play Perudo online with friends for free. No dice needed — open on any phone and start playing."
     />
-
     <meta
       name="keywords"
       content="Perudo, Liar's Dice, Dice Game, Online, Perudo Online, Liar's Dice Online"
     />
-
     <meta name="author" content="Floris de Haan" />
     <link rel="canonical" href="https://peru.do/" />
     <link rel="apple-touch-icon" href="/favicon.png" />
-    <meta property="og:image" content="/perudo.webp" />
-    <meta property="og:image:alt" content="Perudo" />
-    <title>Perudo Online - Play with Friends for Free</title>
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Perudo Online" />
+    <meta property="og:title" content="Perudo Online — Play with Friends for Free" />
+    <meta property="og:description" content="Play Perudo online with friends for free. No dice needed — open on any phone and start playing." />
+    <meta property="og:url" content="https://peru.do/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://peru.do/perudo.webp" />
+    <meta property="og:image:alt" content="Perudo — play online with friends for free" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Perudo Online — Play with Friends for Free" />
+    <meta name="twitter:description" content="Play Perudo online with friends for free. No dice needed — open on any phone and start playing." />
+    <meta name="twitter:image" content="https://peru.do/perudo.webp" />
+
+    <title>Perudo Online — Play with Friends for Free</title>
+
+    <!-- Preload the custom font so it's ready when the pre-rendered h1 paints -->
+    <link rel="preload" href="/static/media/Aztec.b3815ce390f2651546ab.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Perudo Online",
+      "url": "https://peru.do",
+      "description": "Play Perudo online with friends for free. No dice needed — open on any phone and start playing.",
+      "applicationCategory": "Game",
+      "genre": "Multiplayer Dice Game",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Floris de Haan"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Floris de Haan"
+      },
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "keywords": "Perudo, Liar's Dice, online dice game, multiplayer"
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Pre-rendered shell — paints as soon as CSS loads (~600ms) instead of
+        waiting for React to boot (~1400ms), cutting LCP roughly in half.
+        React replaces this on mount with identical content.
+      -->
+      <main class="w-full h-full flex flex-col max-w-[480px] relative">
+        <h1 class="w-full text-center text-[20px] mt-[24px] absolute font-bold">
+          let's play<br />
+          <span class="text-[96px] font-aztec font-normal leading-[84px]">perudo</span>
+        </h1>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,14 +1,15 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Perudo",
+  "name": "Perudo Online — Play Liar's Dice with Friends",
+  "description": "Play Perudo (Liar's Dice) online with friends for free. No account needed.",
   "icons": [
     {
-      "src": "perudo.ico",
+      "src": "favicon.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
