@@ -10,7 +10,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://peru.do"),
   alternates: { canonical: "/" },
   openGraph: {
-    images: [{ url: "/perudo.webp", alt: "Perudo" }],
+    type: "website",
+    url: "https://peru.do",
+    images: [{ url: "/perudo.webp", alt: "Perudo", width: 500, height: 500 }],
   },
   icons: {
     icon: "/favicon.png",
