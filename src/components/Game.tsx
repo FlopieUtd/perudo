@@ -4,6 +4,8 @@ import { useCallback, useEffect, useState } from "react";
 import { Die } from "./Die/Die";
 import { trackGoogleAnalyticsEvent } from "../utils/ga4";
 
+const KOFI_URL = "https://ko-fi.com/perudo";
+
 const getDiceCoordinates = function (
   n: number,
   circleSize: number
@@ -174,6 +176,19 @@ export const Game = () => {
                 -
               </button>
             </div>
+            <p className="text-center text-[12px] text-[#555] pb-[12px] px-[12px]">
+              Free and ad-free.{" "}
+              <a
+                href={KOFI_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+                onClick={() => trackGoogleAnalyticsEvent("action", "tip_click", "game")}
+              >
+                Buy me a coffee
+              </a>{" "}
+              to help keep peru.do online ☕
+            </p>
           </div>
         </div>
       </main>
