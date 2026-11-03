@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { Die } from "./Die/Die";
 import { trackGoogleAnalyticsEvent } from "../utils/ga4";
@@ -177,7 +178,14 @@ export const Game = () => {
               </button>
             </div>
             <p className="text-center text-[12px] text-[#555] pb-[12px] px-[12px]">
-              Free and ad-free.{" "}
+              <Link
+                href="/rules"
+                className="underline"
+                onClick={() => trackGoogleAnalyticsEvent("action", "rules_click", "game")}
+              >
+                How to play
+              </Link>{" "}
+              · Free and ad-free.{" "}
               <a
                 href={KOFI_URL}
                 target="_blank"
