@@ -54,7 +54,6 @@ export const Game = () => {
   const [startTime, setStartTime] = useState("");
   const [diceLeft, setDiceLeft] = useState(5);
   const [roll, setRoll] = useState(0);
-  const [coordinates, setCoordinates] = useState<[number, number][]>([]);
   const [showFaces, setShowFaces] = useState(false);
   const [round, setRound] = useState(1);
 
@@ -100,9 +99,7 @@ export const Game = () => {
 
   const isFresh = roll === 0 && round === 1 && diceLeft === 5;
 
-  useEffect(() => {
-    setCoordinates(getDiceCoordinates(diceLeft, diceLeft === 5 ? 115 : 80));
-  }, [diceLeft]);
+  const coordinates = getDiceCoordinates(diceLeft, diceLeft === 5 ? 115 : 80);
 
   useEffect(() => {
     const documentHeight = () => {
@@ -117,7 +114,7 @@ export const Game = () => {
     <>
       <main className="w-full h-full flex flex-col max-w-[480px] relative">
         {isFresh && (
-          <h1 className="w-full text-center text-[20px] mt-[24px] absolute font-bold">
+          <h1 className="w-full text-center text-[20px] mt-[12px] absolute font-bold">
             let&apos;s play
             <br />
             <span className="text-[96px] font-aztec font-normal leading-[84px]">
@@ -128,7 +125,7 @@ export const Game = () => {
 
         <div className="w-full flex justify-center min-h-[100px]">
           {(roll > 0 || round > 1) && (
-            <div className="p-[12px] w-full max-w-[480px] text-[#555] origin-center">
+            <div className="p-[12px] w-full max-w-[480px] text-[12px] text-[#555] origin-center">
               <div>Started at {startTime}</div>
               <div>Round {round}</div>
               {roll > 0 && <div>Roll {roll}</div>}

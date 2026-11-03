@@ -35,7 +35,14 @@ export const Die = ({
     }
   }, []);
 
+  // Dice remount whenever the dice count changes (their key is their position), so only a
+  // new roll may spin them; otherwise removing or adding a die would animate the rest.
+  const mountedRoll = useRef(roll);
+
   useEffect(() => {
+    if (roll === mountedRoll.current) {
+      return;
+    }
     handleRoll();
   }, [handleRoll, roll]);
 
